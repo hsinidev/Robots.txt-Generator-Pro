@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robots.txt Generator Pro</title>
+    <meta name="description" content="A modern, SEO-safe robots.txt file generator. Create custom directives for crawlers, add sitemaps, and download your file instantly with a clean, intuitive interface set against a stunning animated galaxy background." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        overscroll-behavior: none;
+      }
+      .galaxy-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background: radial-gradient(200% 100% at 50% 0%, #020617 40%, #0f172a 70%, #1e293b 100%);
+        overflow: hidden;
+      }
+      .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: transparent url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgODAwIDgwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNODAwIDQwMEM4MDAgMTc5LjA4NiA2MjAuOTE0IDAgNDAwIDBDMTc5LjA4NiAwIDAgMTc5LjA4NiAwIDQwMEMwIDYyMC45MTQgMTc5LjA4NiA4MDAgNDAwIDgwMEM2MjAuOTE0IDgwMCA4MDAgNjIwLjkxNCA4MDAgNDAwWiIgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIuMSIvPjwvc3ZnPg==') repeat;
+        background-size: 3px 3px;
+        opacity: 0.5;
+        animation: twinkle 20s infinite linear;
+      }
+      .nebula {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: 
+          radial-gradient(ellipse at 70% 20%, rgba(147, 112, 219, 0.2) 0%, transparent 50%),
+          radial-gradient(ellipse at 30% 80%, rgba(0, 191, 255, 0.2) 0%, transparent 50%),
+          radial-gradient(ellipse at 50% 50%, rgba(255, 105, 180, 0.15) 0%, transparent 40%);
+        animation: nebula-flow 120s infinite linear;
+      }
+      .shooting-star {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 2px;
+        background: linear-gradient(-45deg, rgba(192, 132, 252, 1), rgba(0, 0, 0, 0));
+        border-radius: 999px;
+        filter: drop-shadow(0 0 6px rgba(192, 132, 252, 0.5));
+        animation: tail 4s ease-in-out infinite, shooting 4s ease-in-out infinite;
+      }
+      .shooting-star:nth-child(2) {
+        top: 20%;
+        left: 70%;
+        animation-delay: 1.8s;
+        animation-duration: 5s;
+      }
+       .shooting-star:nth-child(3) {
+        top: 90%;
+        left: 30%;
+        animation-delay: 3.2s;
+        animation-duration: 4.5s;
+      }
+      @keyframes twinkle {
+        0% { transform: scale(1); opacity: 0.3; }
+        50% { transform: scale(1.1); opacity: 0.7; }
+        100% { transform: scale(1); opacity: 0.3; }
+      }
+      @keyframes nebula-flow {
+        0% { transform: rotate(0deg) scale(1.5); }
+        50% { transform: rotate(180deg) scale(1.6); }
+        100% { transform: rotate(360deg) scale(1.5); }
+      }
+      @keyframes tail {
+        0% { width: 0; }
+        30% { width: 150px; }
+        100% { width: 0; }
+      }
+      @keyframes shooting {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-800px); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-slate-200 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
